@@ -5,7 +5,7 @@ import java.util.*;
 public class Student {
     private int studentId;
     private String studentName;
-    private String studentPhone;
+    private int studentPhone;
     private String studentCity;
 
     public int getStudentId() {
@@ -24,11 +24,11 @@ public class Student {
         this.studentName = studentName;
     }
 
-    public String getStudentPhone() {
+    public int getStudentPhone() {
         return studentPhone;
     }
 
-    public void setStudentPhone(String studentPhone) {
+    public void setStudentPhone(int studentPhone) {
         this.studentPhone = studentPhone;
     }
 
@@ -40,7 +40,7 @@ public class Student {
         this.studentCity = studentCity;
     }
 
-    public Student(int studentId, String studentName, String studentPhone, String studentCity) {
+    public Student(int studentId, String studentName, int studentPhone, String studentCity) {
         super();
         this.studentId = studentId;
         this.studentName = studentName;
@@ -48,7 +48,7 @@ public class Student {
         this.studentCity = studentCity;
     }
 
-    public Student(String studentName, String studentPhone, String studentCity) {
+    public Student(String studentName, int studentPhone, String studentCity) {
         super();
         this.studentName = studentName;
         this.studentPhone = studentPhone;

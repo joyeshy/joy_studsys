@@ -13,13 +13,17 @@ public class Connect {
 
         try {
             Class.forName("org.postgresql.Driver");
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/iagdb",
+            con = DriverManager.getConnection("jdbc:postgresql://10.1.27.227:5432/iagdb",
                             "iaguser", "passw0rd");
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.err.println(e.getClass().getName()+": "+e.getMessage());
-            System.exit(0);
         }
+
+        catch (Exception e){
+
+            e.printStackTrace();
+
+
+        }
+
         System.out.println("Opened database successfully");
 
         return con;

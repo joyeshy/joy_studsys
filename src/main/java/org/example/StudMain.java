@@ -19,12 +19,13 @@ public class StudMain {
 
             System.out.println("PRESS 1 TO ADD STUDENT");
             System.out.println("PRESS 2 TO DELETE STUDENT");
-            System.out.println("PRESS 1 TO DISPLAY STUDENT");
-            System.out.println("PRESS 1 TO EXIT APP");
-
-            sc.nextLine();
-
+            System.out.println("PRESS 3 TO DISPLAY STUDENT");
+            System.out.println("PRESS 4 TO EXIT APP");
             System.out.println("Dear user, please enter your choice : ");
+
+
+
+
 
             int c = sc.nextInt();
 
@@ -34,10 +35,13 @@ public class StudMain {
 
                 int id = sc.nextInt();
 
+                sc.nextLine();
+
 
                 System.out.println("Dear user, please enter your name : ");
 
                 String name = sc.nextLine();
+
 
 
                 System.out.println("Dear user, please enter your city : ");
@@ -45,9 +49,25 @@ public class StudMain {
                 String city = sc.nextLine();
 
 
+
                 System.out.println("Dear user, please enter your phone number : ");
 
-                String phone = sc.nextLine();
+                int phone = sc.nextInt();
+
+                Student st = new Student(name,phone,city);
+
+                boolean answer = StudentDao.insertStudenttoDB(st);
+
+
+                if( answer ){
+
+                    System.out.println("Student is added sucessfully");
+                }
+                else{
+
+                    System.out.println("Something went wrong,please try again later");
+                }
+                System.out.println(st);
 
 
 
